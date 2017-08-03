@@ -3,7 +3,7 @@ package sealde.chapter6;
 /**
  * Created by sealde on 8/3/17.
  */
-public abstract class Person {
+public class Person {
     private String name;
 
     public Person(){}
@@ -13,6 +13,6 @@ public abstract class Person {
     }
 
     public void show() {
-        System.out.print("装扮的" + this.name);
+        System.out.println("装扮的" + this.name);
     }
 }
