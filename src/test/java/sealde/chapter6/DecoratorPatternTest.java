@@ -1,16 +1,20 @@
 package sealde.chapter6;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Created by sealde on 8/4/17.
  */
 public class DecoratorPatternTest {
+    private static final Logger logger = LoggerFactory.getLogger(DecoratorPatternTest.class);
+
     @Test
     public void decoratorTest() {
         Person person = new Person("阿狸");
 
-        System.out.println("第一套装扮:");
+        logger.info("第一套装扮:");
 
         BigTrouser bigTrouser = new BigTrouser();
         Suit suit = new Suit();
@@ -21,7 +25,7 @@ public class DecoratorPatternTest {
         leatherShoes.decorate(suit);
         leatherShoes.show();
 
-        System.out.println("第二套装扮:");
+        logger.info("第二套装扮:");
 
         Sneakers sneakers = new Sneakers();
         Tie tie = new Tie();
@@ -32,7 +36,7 @@ public class DecoratorPatternTest {
         tShirts.decorate(tie);
         tShirts.show();
 
-        System.out.println("第三套装扮:");
+        logger.info("第三套装扮:");
 
         Suit suit1 = new Suit();
         LeatherShoes leatherShoes1 = new LeatherShoes();
