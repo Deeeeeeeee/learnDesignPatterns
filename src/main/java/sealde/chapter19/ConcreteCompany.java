@@ -25,7 +25,7 @@ public class ConcreteCompany extends Company {
 
     @Override
     public void display(int dept) {
-        System.out.println(this.name);
+        System.out.println(this.createSeparators(dept) + this.name);
         for (Company company : children) {
             company.display(dept +2);
         }
