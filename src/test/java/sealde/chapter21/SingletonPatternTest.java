@@ -1,4 +1,4 @@
-package sealde;
+package sealde.chapter21;
 
 import org.junit.Assert;
 import org.junit.Test;
